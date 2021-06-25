@@ -1,0 +1,157 @@
+/*
+google font: Nunito
+
+brand red: #ff5358
+dark red: #e00007
+background grey: #efefef
+title grey: #edefed
+footer grey: #2B2D2E
+*/
+body {
+	margin:0;
+	font-family: 'Nunito', sans-serif;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin: 0 0 20px;
+}
+h1 {
+	font-size:75px;
+}
+h2 {
+	font-size:42px;
+}
+p {
+	font-size:20px;
+}
+img {
+	max-width: 100%;
+}
+a {
+	text-decoration: none;
+	transition: all 0.3s ease;
+}
+.ul{
+	list-style: none;
+}
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding:10px 30px;
+}
+.logo {
+	height:40px;
+}
+.header-logo li {
+	display: inline;
+}
+.header-logo a {
+	margin:0 1em;
+	color:#000;
+	font-size:20px;
+}
+.header-logo a:last-child {
+	margin-right:0;
+}
+.city {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height:700px;
+
+	color:#fff;
+	text-align:center;
+
+	background-image:
+		linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+		url('../images/melbourne.jpg');
+	background-size:cover;
+}
+
+.city-content {
+	max-width:600px;
+	font-weight: 700;
+}
+.centered-text p {
+	font-size:24px;
+}
+.city-button {
+	margin-top:20px;
+} 
+callout {
+	flex:1;
+	display: flex;
+	flex-direction: column;
+	margin:0 20px;
+	text-align: left;
+	border:1px solid #dcdcdc;
+}
+.callout-title {
+	margin:0;
+	padding:20px;
+	background-color:#edefed;
+}
+.callout-body {
+	flex:1;
+	display: flex;
+	align-items:flex-start;
+	padding:20px;
+	background-color:#fff;
+}
+.callout_icon {
+	margin-right:20px;
+}
+.location {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: stretch;
+
+	height:380px;
+	padding:20px;
+
+	color:#fff;
+	background-size:cover;
+}
+.location-fitzroy {
+	background-image:
+		linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+		url('../images/fitzroy.jpg');
+}
+.location-st-kilda {
+	background-image:
+		linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+		url('../images/st-kilda.jpg');
+}
+.location-cbd {
+	background-image:
+		linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+		url('../images/central-business-district.jpg');
+}
+.location-title {
+	margin:0 0 10px;
+	font-size:50px;
+	line-height: 1.1;
+}
+.location-tagline {
+	margin:0;
+}
+.location-footer {
+	flex:auto;
+	padding:20px;
+	text-align:left;
+	background:#efefef;
+}
+.location-footer p {
+	font-size:16px;
+}
+footer {
+	padding:50px;
+	color:#fff;
+	text-align:center;
+	background:#2B2D2E;
+}
+footer p {
+	padding-top:30px;
+	border-top:1px solid #ccc
+}

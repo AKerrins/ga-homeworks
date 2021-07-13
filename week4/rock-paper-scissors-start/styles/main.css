@@ -1,0 +1,129 @@
+
+*{
+  box-sizing: border-box;
+  padding:0;
+  margin:0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background:grey;
+    color:blue;
+}
+
+h1{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: x-large;
+}
+
+.container {
+    max-width: 1500px;
+    margin: auto;
+    padding: 0 5rem;
+    text-align:center;
+}
+.restart-btn {
+    display:flex;
+    background:red;
+    color:black;
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    cursor:pointer;
+    outline:none;
+    border:10px;
+}
+
+.restart-btn:hover{
+background:green;
+color:black
+}
+
+.header{
+    text-align: center;
+    margin:1 rem 0;
+}
+.header h1{
+    margin-bottom:1rem
+}
+
+.selections{
+    text-align: justify;
+    display:flex;
+    justify-content: space-between;
+    padding: 10px;
+    position: relative;
+    background-color:gray;
+    margin: 10px;
+}
+.selection {
+   display:inline-block;
+   width:100px;
+   height:50px;
+   text-align: center;
+   border:red 2px solid;
+   background-color:white;
+   color:red;
+   cursor: pointer;
+   font-size: large;
+   font-weight: bold;
+   transition:120ms;
+}
+.restart-btn {
+    text-align: justify;
+    display:flex;
+    justify-content: space-between;
+    padding: 10px;
+    position: relative;
+    background-color:gray;
+    margin: 10px;
+}
+.restart {
+    display:flex;
+    width:1000px;
+    height:30px;
+    text-align: center;
+    border:red 2px solid;
+    background-color:white;
+    color:red;
+    cursor: pointer;
+    font-size: large;
+    font-weight: bold;
+    transition:120ms;
+}
+.selection:hover {
+border: black 12px solid;
+background-color: blue;
+transform: scale(2);
+}
+
+.results {
+    display:grid;
+    justify-content: center;
+    grid-template-columns:repeat(2,1fr);
+    font-size: 1.2rem;
+    justify-items:center;
+    align-items:center;
+    color:black;
+}
+
+.result-score {
+    font-size:larger;
+    color:black;
+}
+
+.result-selection {
+    opacity: 0.5;
+}
+
+.result-selection.winner {
+    opacity: 1;
+    font-size:larger;
+}
+
+toggle{
+    height: 30px;
+    width: 200px;
+    background-color: yellow;
+}

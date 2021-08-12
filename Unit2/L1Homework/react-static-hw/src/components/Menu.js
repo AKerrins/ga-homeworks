@@ -18,6 +18,7 @@ const Menu = () => {
       <button>
         <a>All Day</a>
       </button>
+      <hr></hr>
     </div>
   );
 };

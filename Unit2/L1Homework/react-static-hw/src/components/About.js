@@ -24,6 +24,7 @@ const About = () => {
         non eleifend nisl metus ac tellus. Suspendisse tincidunt fringilla
         aliquam. Morbi scelerisque orci nisl, maximus pulvinar augue auctor et.
       </p>
+      <hr></hr>
     </div>
   );
 };

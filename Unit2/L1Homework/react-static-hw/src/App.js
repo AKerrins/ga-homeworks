@@ -1,7 +1,11 @@
 import React from "react";
+//import App from "./styles/main.css";
 import NavBar from "./components/NavBar";
+import Hero from "./components/Hero";
+import Gallery from "./components/Gallery";
 import Menu from "./components/Menu";
 import About from "./components/About";
+import Footer from "./components/Footer";
 
 const App = () => {
   const state = {
@@ -12,7 +16,6 @@ const App = () => {
         "Etiam a nunc nec neque gravida tincidunt. Nulla et interdum libero. Pellentesque ultricies, ex ac blandit congue, elit dolor rhoncus sem, non eleifend nisl metus ac tellus. Suspendisse tincidunt fringilla aliquam. Morbi scelerisque orci nisl, maximus pulvinar augue auctor et.",
       ],
     },
-
     menus: {
       links: ["Breakfast", "Brunch", "All Day"],
       text: [
@@ -24,13 +27,15 @@ const App = () => {
       text: "© General Assembly 2017",
     },
   };
-
   return (
     <div>
       <h1>Coffee Assembly</h1>
       <NavBar />
+      <Hero />
+      <Gallery />
       <Menu />
       <About />
+      <Footer />
     </div>
   );
 };

@@ -11,6 +11,7 @@ const WineCard = ({ _id, name, origin, image }) => {
           <div className="card-header">
             <h4 className="card-header-title">{name}</h4>
           </div>
+
           <div className="card-image">
             <figure className="image is-1by1">
               <img

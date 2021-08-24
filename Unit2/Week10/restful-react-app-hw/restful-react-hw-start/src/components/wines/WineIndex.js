@@ -15,7 +15,8 @@ const WineIndex = () => {
   React.useEffect(() => {
     fetchWinesFromApi()
   }, [])
-  console.log(state)
+  console.log('State from Cheese Index', state)
+
   return (
     <section className="section">
       <div className="container">
@@ -23,6 +24,7 @@ const WineIndex = () => {
           {state.wines.map((wine) => (
             <WineCard
               key={wine._id}
+              _id={wine._id}
               name={wine.name}
               origin={wine.origin}
               image={wine.image}

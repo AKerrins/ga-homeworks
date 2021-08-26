@@ -1,9 +1,11 @@
 import React from 'react'
 import { getAllWines } from '../../lib/api'
+
 import WineCard from './WineCard'
 
 const WineIndex = () => {
   const [state, setState] = React.useState({ wines: [] })
+
   const fetchWinesFromApi = async () => {
     try {
       const response = await getAllWines()
@@ -12,6 +14,7 @@ const WineIndex = () => {
       console.error('There is an error with fetching the wines', err)
     }
   }
+
   React.useEffect(() => {
     fetchWinesFromApi()
   }, [])

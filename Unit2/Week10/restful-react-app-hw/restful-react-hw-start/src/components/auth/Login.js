@@ -37,69 +37,45 @@ const Login = () => {
     <section className="section">
       <div className="container">
         <div className="columns">
-          <div className="column">
-            <form
-              onSubmit={handleSubmit}
-              className="colum is-half is-offset-one-quarter box"
-            >
-              <div className="field">
-                <label className="label">Username:</label>
-                <div className="control">
-                  <input
-                    className="input"
-                    placeholder="Username"
-                    name="username"
-                    value={state.formData.username}
-                    onChange={handleChange}
-                  />
-                </div>
-              </div>
-              <div className="field">
-                <label className="label">Email:</label>
-                <div className="control">
-                  <input
-                    className="input"
-                    placeholder="Email"
-                    name="email"
-                    value={state.formData.email}
-                    onChange={handleChange}
-                  />
-                </div>
-              </div>
-              <div className="field">
-                <label className="label">Password:</label>
-                <div className="control">
-                  <input
-                    className="input"
-                    placeholder="Password"
-                    name="password"
-                    type="password"
-                    value={state.formData.password}
-                    onChange={handleChange}
-                  />
-                </div>
-              </div>
-              <div className="field">
-                <label className="label">Confirm password:</label>
-                <div className="control">
-                  <input
-                    className="input"
-                    placeholder="Confirm password"
-                    name="passwordConfirmation"
-                    value={state.formData.passwordConfirmation}
-                    onChange={handleChange}
-                  />
-                </div>
-              </div>
-              <div className="field">
+          <form
+            onSubmit={handleSubmit}
+            className="column is-half is-offset-one-quarter"
+          >
+            <div className="field">
+              <label className="label">Email:</label>
+              <div className="control">
                 <input
-                  className="button is-fullwidth is-warning"
-                  type="submit"
-                  value="Register"
+                  className="input"
+                  placeholder="Email"
+                  name="email"
+                  value={state.formData.email}
+                  onChange={handleChange}
                 />
               </div>
-            </form>
-          </div>
+            </div>
+
+            <div className="field">
+              <label className="label">Password:</label>
+              <div className="control">
+                <input
+                  className="input"
+                  placeholder="Password"
+                  name="password"
+                  type="password"
+                  value={state.formData.password}
+                  onChange={handleChange}
+                />
+              </div>
+            </div>
+
+            <div className="field">
+              <input
+                className="button is-fullwidth is-warning"
+                type="submit"
+                value="Login"
+              />
+            </div>
+          </form>
         </div>
       </div>
     </section>

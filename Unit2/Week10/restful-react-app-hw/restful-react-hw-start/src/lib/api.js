@@ -1,4 +1,6 @@
 import axios from 'axios'
+import { getToken } from './auth'
+
 const baseUrl = 'https://ga-winebored.herokuapp.com'
 
 export const getAllWines = () => {
@@ -6,11 +8,25 @@ export const getAllWines = () => {
 }
 
 export const getSingleWine = (id) => {
-  return axios.get(`${baseUrl}/${id}`)
+  return axios.get(`${baseUrl}/wines/${id}`)
+}
+
+export const createWine = (formData) => {
+  const requestConfig = {
+    headers: { Authorization: `Bearer ${getToken()}` }
+  }
+  return axios.post(`${baseUrl}/wines`, formData, requestConfig)
+}
+
+export const editWine = (id, formData) => {
+  const requestConfig = {
+    headers: { Authorization: `Bearer ${getToken()}` }
+  }
+  return axios.put(`${baseUrl}/wines/${id}`, formData, requestConfig)
 }
 
 export const registerUser = (formData) => {
-  return axios.post(`${baseUrl}/login`, formData)
+  return axios.post(`${baseUrl}/register`, formData)
 }
 
 export const loginUser = (formData) => {

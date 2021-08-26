@@ -23,6 +23,7 @@ const WineCard = ({ _id, name, origin, image }) => {
               />
             </figure>
           </div>
+
           <div className="card-content">
             <h5>{origin}</h5>
           </div>

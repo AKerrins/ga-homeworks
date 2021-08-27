@@ -4,13 +4,14 @@ const TastingNotesField = ({ tastingNotes, handleChange }) => {
   return (
     <div className="field">
       <label className="label">
-        <span role="img" aria-label="plate">
+        <span role="img" aria-label="tastingNotes">
           🍽
         </span>
         Tasting Notes
       </label>
       <div className="control">
-        <textarea
+        <text
+          area
           className="input"
           placeholder="Tasting Notes"
           name="tastingNotes"

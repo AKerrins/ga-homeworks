@@ -12,7 +12,7 @@ const OriginField = ({ origin, handleChange }) => {
       <div className="control">
         <textarea
           className="input"
-          placeholder="Tasting Notes"
+          placeholder="Origin"
           name="origin"
           value={origin}
           onChange={handleChange}

@@ -30,6 +30,7 @@ const WineNew = () => {
       console.error('Error registering user', err)
     }
   }
+
   const handleChange = (e) => {
     const formData = {
       ...state.formData,

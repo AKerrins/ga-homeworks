@@ -1,9 +1,11 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
-import { getSingleWine } from '../../lib/api'
+import { useParams, Link, useHistory } from 'react-router-dom'
+import { getSingleWine, deleteWine } from '../../lib/api'
+import { getPayload } from '../../lib/auth'
 
 const WineShow = () => {
   const { id } = useParams()
+  const history = useHistory()
   const [state, setState] = React.useState({ wine: null })
 
   const getSingleWineFromApi = async () => {
@@ -27,6 +29,20 @@ const WineShow = () => {
   if (state.wine === null) {
     return <p> Loading ...</p>
   }
+
+  const isOwner = getPayload().sub === state.wine.user._id
+  console.log('Is the owner', isOwner)
+
+  const handleDelete = async () => {
+    const wineIdToDelete = id
+    try {
+      await deleteWine(wineIdToDelete)
+      history.push('/wines')
+    } catch (err) {
+      console.error(`Failed to delete cheese ${id}`, err)
+    }
+  }
+
   return (
     <section className="section">
       <div className="container">
@@ -62,6 +78,18 @@ const WineShow = () => {
             </h4>
             <p>{state.wine.user.username}</p>
             <hr />
+
+            {isOwner && (
+              <>
+                <Link to={`/wines/${id}/edit`} className="button is-warning">
+                  Edit Wine
+                </Link>
+
+                <button className="button is-danger" onClick={handleDelete}>
+                  Delete Wine
+                </button>
+              </>
+            )}
           </div>
 
           <div className="column is-half">

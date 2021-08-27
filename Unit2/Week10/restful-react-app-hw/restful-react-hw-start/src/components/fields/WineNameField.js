@@ -4,7 +4,7 @@ const WineNameField = ({ name, handleChange }) => {
   return (
     <div className="field">
       <label className="label">
-        <span role="img" aria-label="glass">
+        <span role="img" aria-label="name">
           🍷
         </span>
         Name:

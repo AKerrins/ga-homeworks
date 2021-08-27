@@ -11,14 +11,14 @@ const WineIndex = () => {
       const response = await getAllWines()
       setState({ wines: response.data })
     } catch (err) {
-      console.error('There is an error with fetching the wines', err)
+      console.error('There is an error with fetching all wines', err)
     }
   }
 
   React.useEffect(() => {
     fetchWinesFromApi()
   }, [])
-  console.log('State from Cheese Index', state)
+  console.log('State from Wine Index', state)
 
   return (
     <section className="section">

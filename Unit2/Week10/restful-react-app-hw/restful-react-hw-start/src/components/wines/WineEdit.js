@@ -79,11 +79,12 @@ const WineEdit = () => {
               handleChange={handleChange}
               image={state.formData.image}
             />
+
             <div className="field">
               <input
                 className="button is-fullwidth is-warning"
                 type="submit"
-                value={`Add ${state.formData.name || 'edited wine'}`}
+                value={`Edit ${state.formData.name || 'new wine'}`}
               />
             </div>
           </form>

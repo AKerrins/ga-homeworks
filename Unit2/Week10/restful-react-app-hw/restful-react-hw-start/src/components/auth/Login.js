@@ -16,7 +16,6 @@ const Login = () => {
 
     try {
       const res = await loginUser(state.formData)
-      console.log('Response from API is', res)
       if (res.status === 200) {
         setToken(res.data.token)
         history.push('/wines')
@@ -39,7 +38,7 @@ const Login = () => {
         <div className="columns">
           <form
             onSubmit={handleSubmit}
-            className="column is-half is-offset-one-quarter"
+            className="column is-half is offset-one-quarter"
           >
             <div className="field">
               <label className="label">Email:</label>

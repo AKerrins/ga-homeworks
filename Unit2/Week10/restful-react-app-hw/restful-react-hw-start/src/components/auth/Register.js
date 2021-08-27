@@ -106,4 +106,4 @@ const Register = () => {
   )
 }
 export default Register
-//comment - saving this as prettier doesnt work
+//inserting and saving this comment to make prettier work

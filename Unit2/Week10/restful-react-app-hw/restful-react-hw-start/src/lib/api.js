@@ -25,6 +25,13 @@ export const editWine = (id, formData) => {
   return axios.put(`${baseUrl}/wines/${id}`, formData, requestConfig)
 }
 
+export const deleteWine = (id) => {
+  const requestConfig = {
+    headers: { Authorization: `Bearer ${getToken()}` }
+  }
+  return axios.delete(`${baseUrl}/wines/${id}`, requestConfig)
+}
+
 export const registerUser = (formData) => {
   return axios.post(`${baseUrl}/register`, formData)
 }

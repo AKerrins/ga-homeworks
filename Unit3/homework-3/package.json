@@ -1,0 +1,23 @@
+{
+  "name": "books-api-database",
+  "version": "1.0.0",
+  "description": "api with database",
+  "main": "server.js",
+  "scripts": {
+    "start:server": "npx nodemon server.js",
+    "seed":"node db/seed.js"
+  },
+  "keywords": [
+    "api",
+    "database"
+  ],
+  "type": "module",
+  "author": "A Kerrins",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^6.0.5",
+    "mongoose-unique-validator": "^2.0.3",
+    "nodemon": "^2.0.12"
+  }
+}
